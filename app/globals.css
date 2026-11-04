@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f8fc;
+  --foreground: #071d55;
+  --surface: #ffffff;
+  --navy: #071d55;
+  --primary-blue: #075de5;
+  --electric-blue: #087ff5;
+  --cyan: #08c8d8;
+  --light-bg: #f5f8fc;
+  --slate: #64748b;
+  --border: #e2e8f0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-jakarta);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  font-optical-sizing: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-jakarta), "Segoe UI", Arial, sans-serif;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  font-synthesis-weight: none;
+}
+
+p {
+  line-height: 1.65;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus-visible {
+  outline: 3px solid #087ff5;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -4rem;
+  left: 1rem;
+  z-index: 100;
+  border-radius: 0.5rem;
+  background: #071d55;
+  padding: 0.75rem 1rem;
+  color: #fff;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+::selection {
+  background: rgba(8, 127, 245, 0.2);
+}
+
+.hero-shell {
+  background: linear-gradient(135deg, rgba(8, 127, 245, 0.06), rgba(8, 200, 216, 0.08));
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.blue-orb {
+  background: radial-gradient(circle at 30% 30%, rgba(8, 200, 216, 0.5), rgba(7, 93, 229, 0.18) 35%, rgba(255, 255, 255, 0.8) 70%);
+}
+
+.grid-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(8, 127, 245, 0.14) 1px, transparent 0);
+  background-size: 26px 26px;
+}
+
+.card-shadow {
+  box-shadow: 0 20px 40px rgba(7, 29, 85, 0.05);
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
